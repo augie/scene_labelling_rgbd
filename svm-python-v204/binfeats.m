@@ -1,4 +1,5 @@
-dataN = load('temp_data_nodefeats.txt');
+source('../../getBinStumps.m');
+dataN = load('./temp_data_nodefeats.txt');
 
 numFeats=size(dataN,2)-3;
 numFeatsBinned=numFeats*10;
@@ -14,7 +15,7 @@ for f = 4:size(dataN,2)
   end
   
 end
-dlmwrite('binStumpsN.txt',binStumps','\t')
+dlmwrite('binStumpsN.txt',binStumps,'\t')
 
 dataE = load('temp_data_edgefeats.txt');
 numFeats=size(dataE,2)-5;
@@ -30,7 +31,7 @@ for f = 6:size(dataE,2)
     dataEB(:,5+b+(f-6)*10) =  (dataE(:,f)<=binv(b));
   end
 end
-dlmwrite('binStumpsE.txt',binStumps','\t')
+
+dlmwrite('binStumpsE.txt',binStumps,'\t')
 dlmwrite('temp_data_nodefeats.b.txt',dataNB,'delimiter','\t','precision','%d')
 dlmwrite('temp_data_edgefeats.b.txt',dataEB,'delimiter','\t','precision','%d')
-quit
