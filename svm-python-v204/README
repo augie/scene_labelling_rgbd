@@ -3,12 +3,12 @@ INSTALLATION:
 Run make.
 
 
+REPLICATING STUDY FROM THIS POINT FORWARD:
 
+This has already been done. To see the results, look in folders ./work/home and ./work/office
 
 
 OTHER INSTRUCTIONS:
-
-
 
 svmstruct_mrf Specific Options:
          --m module_name   ->  the module name, which is 'svmstruct_mrf'
