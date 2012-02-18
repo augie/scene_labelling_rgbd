@@ -23,6 +23,9 @@ TRAINING AND CLASSIFICATION:
    c) labelmap.txt
 	Description: mapping from the linenumber of labels.txt to the label number used by the classifer.
 
+   d) objectmap.txt
+        Description: ?
+
 3) Change your current working directory (cd) to the new directory you created.
 4) Run ../../initialize.sh
 
