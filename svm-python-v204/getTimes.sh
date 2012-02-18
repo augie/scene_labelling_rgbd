@@ -1,13 +1,13 @@
 rm allTimes
 rm LPTimes
 rm MIPTimes
-for i in `seq 1 4` 
-do
-echo "fold$i "
-grep "Time for "  fold$i/pred/$1 >> allTimes
-grep "Time for LP"  allTimes >> LPtimes
-grep "Time for MIP"  allTimes >> MIPtimes
 
+for i in `seq 1 4`
+do
+  echo "fold$i "
+  grep "Time for "  fold$i/pred/$1 >> allTimes
+  grep "Time for LP"  allTimes >> LPtimes
+  grep "Time for MIP"  allTimes >> MIPtimes
 done
 
 echo "LP stats"

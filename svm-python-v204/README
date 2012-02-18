@@ -3,11 +3,6 @@ INSTALLATION:
 Run make.
 
 
-REPLICATING STUDY:
-
-This has already been done. To see the results, look in folders ./work/home and ./work/office
-
-
 TRAINING AND CLASSIFICATION:
 
 1) Create a new directory with an appropriate name in ./work/
@@ -29,6 +24,8 @@ TRAINING AND CLASSIFICATION:
 	Description: mapping from the linenumber of labels.txt to the label number used by the classifer.
 
 3) Change your current working directory (cd) to the new directory you created.
+4) Run ../../initialize.sh
+
 
 
 

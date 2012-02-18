@@ -14,6 +14,8 @@ do
   mkdir fold$i/logs/ > /dev/null 2> /dev/null
   mkdir fold$i/models/ > /dev/null 2> /dev/null
   mkdir fold$i/imodels/ > /dev/null 2> /dev/null
+  touch fold$i/test$i
+  touch fold$i/train$i
   rm fold$i/pred/* >/dev/null 2> /dev/null
   rm fold$i/logs/* > /dev/null 2> /dev/null
   rm fold$i/models/* > /dev/null 2> /dev/null
