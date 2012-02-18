@@ -40,7 +40,7 @@ make
 sudo make install
 cd ..
 
-sudo apt-get install python-numpy python-scipy octave
+sudo apt-get install python-numpy python-scipy
 
 echo
 echo

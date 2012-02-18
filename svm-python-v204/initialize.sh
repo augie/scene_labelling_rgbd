@@ -1,7 +1,7 @@
 rm data_nodefeats.*.txt data_edgefeats.*.txt datas_*.txt > /dev/null 2> /dev/null
 perl ../../filter.pl data_nodefeats.txt
 perl ../../filter.pl data_edgefeats.txt
-octave ../../binfeats.m
+matlab -nodesktop -nosplash -r binfeats
 cat header_data_nodefeats.txt temp_data_nodefeats.b.txt > data_nodefeats.b.txt
 cat header_data_edgefeats.txt temp_data_edgefeats.b.txt > data_edgefeats.b.txt
 rm temp_data_* header_data_* > /dev/null 2> /dev/null
