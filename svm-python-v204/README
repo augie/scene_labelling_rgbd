@@ -1,3 +1,14 @@
+INSTALLATION:
+
+Run make.
+
+
+
+
+
+OTHER INSTRUCTIONS:
+
+
 
 svmstruct_mrf Specific Options:
          --m module_name   ->  the module name, which is 'svmstruct_mrf'
