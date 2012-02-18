@@ -1,4 +1,5 @@
 num=0
+
 for file in `ls transformed*.pcd`
 do
   num=`expr $num + 1`
@@ -12,5 +13,5 @@ do
   bagfile="rgbdslamOut/$bfile.bag.stitched.bag"
   echo  $bagfile
   ls -l $bagfile
-  rosrun scene_processing  compute_all_features $file $num $labeledfile $bagfile #$num_bins_color $num_bins_shape
+  rosrun scene_processing compute_all_features $file $num $labeledfile $bagfile #$num_bins_color $num_bins_shape
 done

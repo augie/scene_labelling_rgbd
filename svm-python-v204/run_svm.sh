@@ -15,4 +15,4 @@ cd data/$data/fold$i
 
 sleep 2
 ../../../svm_python_classify --m svmstruct_mrf --l $loss --lm $lmethod --cm $cmethod --omf $objectmapfile test$i models/$modelFile pred/pred.$cmethod.$modelFile > pred/out.$cmethod.$modelFile 2>> ../../../errfile
-cd - 
+cd -
