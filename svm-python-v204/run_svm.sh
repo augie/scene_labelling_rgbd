@@ -10,7 +10,8 @@ loss=$9
 objectmapfile=$10
 data=$11
 
-cd data/$data/fold$i
+cd $data/fold$i
+mkdir logs
 ../../../svm_python_learn --m svmstruct_mrf --l $loss --lm $lmethod --omf $objectmapfile -c $c  -e $e  train$i models/$modelFile >> logs/log.$suffix 2> ../../../errfile
 
 sleep 2
