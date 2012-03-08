@@ -1,9 +1,9 @@
-$WORKDIR=$1
+WORKDIR=$1
 rm $WORKDIR/data_nodefeats.*.txt $WORKDIR/data_edgefeats.*.txt $WORKDIR/datas_*.txt > /dev/null 2> /dev/null
-perl filter.pl $WORKDIR/data_nodefeats.txt
-cp $WORKDIR/temp_data_nodefeats.txt temp_data_nodefeats.txt
-perl filter.pl $WORKDIR/data_edgefeats.txt
-cp $WORKDIR/temp_data_edgefeats.txt temp_edge_edgefeats.txt
+cp $WORKDIR/data_nodefeats.txt ./data_nodefeats.txt
+cp $WORKDIR/data_edgefeats.txt ./data_edgefeats.txt
+perl filter.pl data_nodefeats.txt
+perl filter.pl data_edgefeats.txt
 matlab -nodesktop -nosplash -r binfeats
 cat header_data_nodefeats.txt temp_data_nodefeats.b.txt > $WORKDIR/data_nodefeats.b.txt
 cat header_data_edgefeats.txt temp_data_edgefeats.b.txt > $WORKDIR/data_edgefeats.b.txt
