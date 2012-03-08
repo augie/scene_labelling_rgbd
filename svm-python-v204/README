@@ -27,7 +27,7 @@ TRAINING AND CLASSIFICATION:
         Description: ?
 
 3) Change your current working directory (cd) to the new directory you created.
-4) Run ../../initialize.sh
+4) From the svm-python-v204 direction, run ./initialize.sh {WORK DIRECTORY WITHOUT ENDING '/'}
 5) Add to each of the test# and train# files in each of the fold# folders the location of the appropriate datas_*.txt files.
 	
 	Example file where the created directory was homedata

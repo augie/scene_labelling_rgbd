@@ -1,6 +1,7 @@
 #!/bin/bash
 
 data=$1
+cp $data/objectmap.txt ./
 loss=micro
 lmethod=objassoc
 cmethod=sum1.IP
@@ -12,16 +13,15 @@ for i in `seq 1 4`
 do
   suffix=c$c.e$e.$lmethod
   modelFile=model.$suffix
-
-  modelFolder=data/$data/fold$i/models
-  echo "out.$method.$modelFile" >> data/$data/fold$i/lastout.txt
+  modelFolder=$data/fold$i/models
+  echo "out.$method.$modelFile" >> $data/fold$i/lastout.txt
   sh run_svm.sh $c $e $i $modelFile $modelFolder $suffix $cmethod $lmethod $loss $objmapfile $data 
 done
 
 echo "processes completed!"
-perl get_avg_pr.pl out.$cmethod.$modelFile data/$data/ > data/$data/avg_pr.$cmethod.$modelFile
+perl get_avg_pr.pl out.$cmethod.$modelFile $data/ > $data/avg_pr.$cmethod.$modelFile
 method=$suffix.$cmethod
-perl get_confusion_matrix.pl out.$cmethod.$modelFile $method data/$data/ > data/$data/confusionM.$method
+perl get_confusion_matrix.pl out.$cmethod.$modelFile $method $data/ > $data/confusionM.$method
 
 rm runinfo
 echo $HOSTNAME >> runinfo
@@ -38,9 +38,9 @@ echo "" >> runinfo
 echo "~~~~~~~~~~~~~~~" >> runinfo
 echo "" >> runinfo
 echo "" >> runinfo
-cat data/$data/avg_pr.$cmethod.$modelFile >> runinfo
+cat $data/avg_pr.$cmethod.$modelFile >> runinfo
 echo "" >> runinfo
 echo "~~~~~~~~~~~~~~~" >> runinfo
 echo "" >> runinfo
 echo "" >> runinfo
-cat data/$data/confusionM.$method >> runinfo
+cat $data/confusionM.$method >> runinfo
