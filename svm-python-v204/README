@@ -26,9 +26,11 @@ TRAINING AND CLASSIFICATION:
    d) objectmap.txt
         Description: ?
 
-3) Change your current working directory (cd) to the new directory you created.
-4) From the svm-python-v204 direction, run ./initialize.sh {WORK DIRECTORY WITHOUT ENDING '/'}
-5) Add to each of the test# and train# files in each of the fold# folders the location of the appropriate datas_*.txt files.
+3) From the svm-python-v204 direction, run:
+
+	./initialize.sh {WORK DIRECTORY WITHOUT ENDING '/'}
+
+4) Add to each of the test# and train# files in each of the fold# folders the location of the appropriate datas_*.txt files.
 	
 	Example file where the created directory was homedata
 	$ cat fold1/test1 
@@ -37,7 +39,9 @@ TRAINING AND CLASSIFICATION:
 	/opt/ros/diamondback/stacks/scene_labelling_rgbd/svm-python-v204/homedata/datas_18.txt
 	/opt/ros/diamondback/stacks/scene_labelling_rgbd/svm-python-v204/homedata/datas_19.txt
 
-6) Run ../../run_sequential.sh or ../../run_parallel.sh to train and test a classifier.
+5) To train and test a classifier, run:
+
+	./run_sequential.sh {FULL PATH OF WORK DIRECTORY WITHOUT ENDING '/'}
 
 
 
