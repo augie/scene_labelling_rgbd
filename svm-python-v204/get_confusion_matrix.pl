@@ -1,8 +1,7 @@
-#$outFile=`cat fold$i/lastout.txt`;
 $outFile = shift;
 $method= shift;
 $dir = shift;
-$labelmapfile = "./$dir/labelmap.txt";
+$labelmapfile = "$dir/labelmap.txt";
 $labelsfile = '../scene_processing/labels.txt';
 $numClasses=`cut -f 2 -d ' ' $labelmapfile | sort -n | tail -1`;
 
@@ -51,7 +50,7 @@ for $c (@C)
   {
     $flag = 0; 
     $count = 0;
-    open(F,"./$dir/fold$i/pred/$outFile")   ;
+    open(F,"$dir/fold$i/pred/$outFile")   ;
     while(<F>){
       chomp ;
       $line = $_;

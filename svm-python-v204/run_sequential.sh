@@ -1,7 +1,6 @@
 #!/bin/bash
 
 data=$1
-cp $data/objectmap.txt ./
 loss=micro
 lmethod=objassoc
 cmethod=sum1.IP
